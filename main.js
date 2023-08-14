@@ -9,9 +9,9 @@ function Datos () {
 
             //valores a comparar
             const precio = resultado.data.data.map(item => {
-                return parseInt(item.priceUsd)
+                return parseInt(item.priceUsd/1000)
             })
-
+/*
             const myChart = new Chart(grafico, {
                 type:"line",
                 data:{
@@ -43,15 +43,17 @@ function Datos () {
                         }
                     }
                 }
-            })
+            })*/
             Valorestbl.innerHTML = "";
             for (const valor of resultado.data.data) {
-                let tr = `<tr>
-                <td>${valor.symbol}<td>
-                <td>${valor.name}<td>
-                <td>${parseInt(valor.priceUsd)}<td>
-                </tr>`
-                Valorestbl.innerHTML += tr;
+                if (parseInt(valor.priceUsd) > 100) {
+                    let tr = `<tr>
+                    <td>${valor.symbol}<td>
+                    <td>${valor.name}<td>
+                    <td>${parseInt(valor.priceUsd)}<td>
+                    </tr>`
+                    Valorestbl.innerHTML += tr;
+                }
             }
     })
 }

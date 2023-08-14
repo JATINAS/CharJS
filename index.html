@@ -12,23 +12,44 @@
     <title>Proyecto 3</title>
 </head>
 <body>
-    <div>
-        <div>
-            <canvas id="myChart" width="300px" height="200px"></canvas>
-        </div>
-        <div>
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <td>#</td>
-                        <td>Nombre</td>
-                        <td>Valor</td>
-                    </tr>
-                </thead>
-                <tbody id="Valorestbl">
+    <div style="overflow: hidden; height: 100vh; display: flex;">
+        <div style="flex-shrink: 0; display: flex; background-color: black;">
+            <div style="flex-direction: column; width: 16rem; display: flex;">
+                <div style="flex-direction: column; flex: 1 1 0%; height: 0; display: flex;">
+                    <div style="padding-bottom: 1rem; padding-top: 1.25rem; overflow-y: auto; flex-direction: column; flex: 1 1 0%; display: flex;">
+                        <div style="padding-left: 1rem; padding-right: 1rem; align-items: center; flex-shrink: 0; display: flex;">
+                            <img style="height: 8rem; width: auto;" src="images/uroboros-rb.jpg" alt="logo">
+                            <p style=" color: white;font-size: 16px; margin: 0px 25px; text-align: left;">Proyecto 3: Tablero de datos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                </tbody>
-            </table>
+        </div>
+        <div style="flex-direction: column; flex: 1 1 0%; display: flex; overflow: hidden;">
+            <div style="position: relative;">
+                <div style="top: 0; right: 0; bottom: 0; left: 0; position: absolute;">
+                    <canvas id="myChart" width="300px" height="200px"></canvas>
+                    <div style="top: 0; right: 0; bottom: 0; left: 0; position: absolute;">
+
+                    </div>
+                </div>
+            </div>
+            
+            <div style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>Nombre</td>
+                            <td>Valor</td>
+                        </tr>
+                    </thead>
+                    <tbody id="Valorestbl">
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
